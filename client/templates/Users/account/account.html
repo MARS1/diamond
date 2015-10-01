@@ -1,0 +1,18 @@
+<template name="Account">
+
+	<div class="account--wrap">
+
+		<h6 class="header-padding-bottom">Welcome, <span class="account__username">{{currentUser.services.facebook.first_name}}</span></h6>
+
+		{{> AccountNavUser}}
+
+		<div class="account__content tab-content">
+			<div role="tabpanel" class="tab-pane" id="contactTab">
+				{{> ContactTab}}
+			</div>
+			<div role="tabpanel" class="tab-pane" id="billingTab">
+				{{> BillingTab}}
+			</div>
+		</div>
+	</div>
+</template>

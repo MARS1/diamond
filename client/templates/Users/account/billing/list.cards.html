@@ -1,0 +1,17 @@
+<template name="ListCards">
+	<div class="card__list">
+		<div class="card__content">
+		<!-- isSubReady method from meteor-flow-router-helpers package -->
+		{{#if isSubReady 'cards'}}
+
+			{{#each getCards}}
+				{{> CreditCardNav}}
+				{{> CreditCardContent}}
+			{{/each}}
+
+		{{else}}
+					Loading...
+		{{/if}}
+		</div>
+	</div>
+</template>

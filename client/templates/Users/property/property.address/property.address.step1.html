@@ -1,0 +1,21 @@
+<template name="PropertyCreate1">
+	<div class="map__container">
+		<div class="address__container background-opaque address__container--padding_top">
+			<h1>Enter your property Address</h1>
+			<!-- {{> AddressInput}} -->
+				<form class="property__input">
+			    <div class="form-group">
+			      <div class="controls">
+			          <input name="propertyAddress" id="propertyAddress" type="text" value="" placeholder="Enter your property address" class="form-control"/>
+			      </div>
+			    </div>
+			    <a href="{{pathFor 'home'}}" class="btn-property--cancel btn btn--base btn--rect btn__text--white btn--neutral">Cancel</a>
+
+			    <input name="propertyButton" id="submitProperty" type="submit" value="Find My Property" class="btn btn--base btn--rect btn__text--white btn--mint "/>
+			  </form>
+		</div>
+		{{> googleMap name="Map" options=mapOptions}}
+	</div>
+</template>
+
+

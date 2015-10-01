@@ -1,0 +1,121 @@
+//
+// 0PX
+//
+@media (min-width: 0px) {
+	.klenly__footer {
+		.both;
+		footer {
+			.auto;
+		}
+		.footer__logo	{
+			margin: 0;
+			width: 50%;
+			height: 50px;
+			.inline-block;
+			.footer__text {
+				font-size: .375em;
+				color: @white;
+				padding: 12px 0;
+			}
+		}
+		.footer__logo--small {
+			width: 94px;
+			height: 30px;
+			background: url('../img/svg/logos/klenly-logo-white.svg');
+		  background-size: 100%;
+		  background-position: center center;
+		  padding: 0;
+			.background;
+			.block;
+		}
+		.footer__social {
+			display: none;
+		}
+		.social,
+		.footer__menu {
+			.inline-block;
+		}
+		.footer__menu {
+			width: 50%;
+			.right;
+			li {
+				text-align: right;
+				height: 30px;
+				padding-top: 4px;
+				margin-right: 20px;
+				.right;
+				a {
+					vertical-align: text-top;
+					font-size: @medium;
+					color: @white;
+				}
+			}
+		}
+		.facebook, .pinterest, .twitter {
+			width: 20px;
+		}
+	}
+}
+
+//
+// 777PX
+//
+@media (min-width: 777px) {
+
+	.klenly__footer {
+
+		footer {
+			max-width: 777px;
+			.facebook, .pinterest, .twitter {
+					width: 30px;
+			}
+		}
+		.footer__social {
+			width: 40%;
+			.block;
+			.left;
+			li {
+				.none;
+				width: 30px;
+				margin-right: 24px;
+				line-height: 60px;
+				.left;
+			}
+			li:last-child {
+				margin-right: 0;
+			}
+			li a {
+				.transition;
+			}
+			li a:hover {
+				transition: 0.25s ease-in-out;
+				margin-top: -10px;
+				padding-bottom: 10px;
+			}
+		}
+		.footer__logo {
+			width: 20%;
+		}
+		.footer__logo--small {
+			.auto;
+		}
+		.footer__text {
+			.center;
+		}
+		.footer__menu {
+			width: 40%;
+			height: 50px;
+			line-height: 35px;
+			text-align: right;
+			.right;
+			li {
+				padding: 2px 0;
+				.inline-block;
+				.right;
+				a {
+					font-size: @medium;
+				}
+			}
+		}
+	}
+}

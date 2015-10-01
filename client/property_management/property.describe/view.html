@@ -1,0 +1,67 @@
+<template name="describeProperty">
+  <h1> {{address}} </h1>
+  <div> {{errorMessage}} </div>
+  <div>
+    <img src="{{coverPhoto}}" />
+  </div>
+
+  <div> Describe your property: </div>
+  <div> 
+
+    Type of property: {{typeOfProp}}
+
+    <form id="typeOfProperty" action="">
+
+      <label for="house">House</label>
+      <input id="house" type="radio" value="house" name="propertyType" />
+
+      <label for="apartment">Apartment</label>
+      <input id="apartment" type="radio" value="apartment" name="propertyType" />
+
+      <label for="condo">Condo</label>
+      <input id="condo" type="radio" value="condo" name="propertyType" />
+
+    </form>
+
+  </div>
+
+  <div>
+    <div class="block3" id="noBedrooms">
+      Bedrooms: {{noBedrooms}}
+      <div>
+        <button>+</button>
+        <button>-</button>
+      </div>
+    </div>
+
+    <div class="block3" id="noBathrooms">
+      <div>Bathrooms: {{noBathrooms}}</div>
+      <div>
+        <button>+</button>
+        <button>-</button>
+      </div>
+    </div>
+
+    <div class="block3" id="sqFeet">
+      <div>Square Feet: {{sqFeet}}</div>
+      <div>
+        <button>+</button>
+        <button>-</button>
+      </div>
+    </div>
+
+    <div class="block3" id="levels">
+      <div>Levels: {{levels}}</div>
+      <div>
+        <button>+</button>
+        <button>-</button>
+      </div>
+    </div>
+  </div>
+
+  <div>
+    <button> <a href="{{pathFor route='home'}}"> cancel </a> </button>
+    <button class="submit"> create property </button>
+  </div>
+
+</template>

@@ -1,0 +1,11 @@
+<template name="confirmProperty">
+  <h1> Is this your property? </h1>
+  <h2> {{address}} </h2>
+  <div class="map-container">
+    {{> googleMap name="exampleMap" options=exampleMapOptions}}
+  </div>
+  <div>
+    <a href="{{pathFor route='property.describe'}}">yes</a>
+    <a href="{{pathFor route='property.address'}}">no</a>
+  </div>
+</template>

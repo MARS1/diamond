@@ -1,0 +1,29 @@
+<template name="JobCreateStep2">
+
+	<div class="steps__container">
+		<section class="steps">
+			{{> StepsNav}}
+		</section>
+
+		<section class="step__content">
+			Here goes the content for Step 2
+		</section>
+	</div>
+
+	<section class="step__options">
+		<div class="step__options--wrap">
+			{{> Step2Continue}}
+		</div>
+	</section>
+</template>
+
+<template name="Step2Continue">
+	<div class="step__options--left">
+		<a href="{{ pathFor 'home' }}" class="btn btn--base btn--rect btn__text--white btn--cancel">Cancel</a>
+	</div>
+
+	<div class="step__options--right">
+		<a href="{{ pathFor 'home' }}" class="btn btn--base btn--rect btn__text--white btn--neutral">Save for later</a>
+		<a href="{{ pathFor 'jobCreate3' }}" class="btn btn--base btn--rect btn__text--white btn--mint">Step 3 - Contact Information</a>
+	</div>
+</template>

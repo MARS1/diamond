@@ -1,0 +1,73 @@
+// Basic
+@white: #ffffff;
+@black: #000000;
+@grey: #9B9B9B;
+@pale-grey: #F4F4F4;
+@lt-grey: lighten(@grey, 20%);
+@md-grey: lighten(@dk-grey, 30%);
+@dk-grey: darken(@grey, 20%);
+
+// Global
+@headline: #f34455;
+@header: @grey;
+@footer: @watermelon;
+@tabs: @grey;
+
+
+// Brand
+@lt-mint: lighten(@mint, 20%);
+@mint: #7FDBE2;
+@mint2: darken(@mint, 15%); //#41c9d4
+@mint3: #00ACB9;
+@mint4: #00919B;
+
+@watermelon: #ff526c;
+@watermelon2: darken(@watermelon, 5%);
+@watermelon3: #F68093;
+@watermelon4: lighten(@watermelon3, 15%);
+
+@sunshine: #FFF9B1;
+@sunshine2: darken(@sunshine, 5%);
+
+@rose: #F68093;
+@rose2: darken(@rose, 5%);
+
+@lime-sherbert: #F0FFFB;
+
+// Neutral
+@md-grey: darken(@lt-grey, 5%);
+@md-grey2: darken(@md-grey, 15%);
+
+// Notifications / Alerts
+@danger: #BA3C51;
+@danger2: darken(@danger, 5%);
+
+
+// Color Classes
+.watermelon {
+	color: @watermelon;
+}
+.mint {
+	color: @mint;
+}
+.sunshine {
+	color: @sunshine;
+}
+.rose {
+	color: @rose;
+}
+.lt-grey {
+	color: @lt-grey;
+}
+
+.pale {
+	color: @pale-grey;
+}
+
+.pale-trans {
+	background: rgba(244, 244, 244, 0.9);
+}
+
+.img-holder {
+	background: #E2E8E8;
+}

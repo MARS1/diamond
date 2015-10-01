@@ -1,0 +1,26 @@
+<template name="jobProperty">
+        {{#autoForm schema=jobPropertySchema id="jobPropertyForm" type="normal" doc=jobPropertyData}}
+            <fieldset>
+                {{#if routeHasProp}}
+                    {{>afQuickField type="hidden" name="propertyId"}}
+                {{else}}
+                    {{>afQuickField name="propertyId"}}
+                {{/if}}
+                {{>afQuickField name="cleanDate"}}
+                {{>afQuickField name="cleanSchedule"}}
+                {{#if afFieldValueIs name="cleanSchedule" value="regular"}}
+                    {{>afQuickField name="cleanFrequency"}}
+                {{/if}}
+                {{>afQuickField name="cleanType"}}
+                {{>afQuickField name="cleanServices" options=cleanServiceOptions}}
+                <!-- clean services: {{currentValue 'cleanServices'}} -->
+                {{>afQuickField name="petTypes" options=petOptions}}
+                {{>afQuickField name="petDetails"}}
+                {{>afQuickField name="flooringTypes" options=flooringOptions}}
+                {{#if afFieldValueContains name="flooringTypes" value="other"}}
+                    {{>afQuickField name="flooringDetails"}}
+                {{/if}}
+            </fieldset>
+            <button type="submit" fxn="submitJobProperty" class="btn btn-primary">next</button>
+        {{/autoForm}}
+</template>

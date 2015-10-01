@@ -1,0 +1,73 @@
+<template name="DisplayProperties">
+	{{#if zeroProps}}
+		{{> HomeNoProperties}}
+	{{else}}
+		{{> HomeHasProperties}}
+	{{/if}}
+</template>
+
+<template name="HomeHasProperties">
+	{{#each properties}}
+	{{log}}
+	<div class="row">
+
+		<div class="property__cover-photo--container">
+			<img src="" alt="" class="property__coverPhoto">
+		</div>
+
+		<div class="property__details--container">
+			<h4> {{address}} </h4>
+			<h6> <span>{{typeOfProp}}</span> </h6>
+			<ul class="property__details--list">
+				<li> <span class="watermelon">{{noBedrooms}}</span> Br <span class="lt-grey">|</span></li>
+				<li> <span class="watermelon">{{noBathrooms}}</span> Ba <span class="lt-grey">|</span></li>
+				<li> <span class="watermelon">{{sqFeet}}</span> sq. ft. <span class="lt-grey">|</span></li>
+				<li> <span class="watermelon">{{levels}}</span> level(s)</li>
+			</ul>
+		</div>
+
+		<div class="property__options--container">
+			<div class="property__options--trigger-container">
+				<button class="property__options--trigger btn__circle--base btn__circle-no-margin btn--mint btn__text--white" data-id="{{_id}}"><span class="icon-cog"></span></button>
+			</div>
+			<div class="property__options-list-wrapper reveal">
+				<div class="property__option--wrapper">
+					<button class="property__option--delete-property-button delete" data-id="{{_id}}"><span class="icon-cross"></span> <span class="ico__text">Delete Property</span> </button>
+				</div>
+				<div class="property__option--wrapper">
+					<button class="property__option--create-job-button"><a href="{{ pathFor route='job.property' propertyId=_id}}" >	<span class="icon-ico-create-job-post"></span> <span class="ico__text">Create Job Post</span> </a></button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="both"></div>
+	<hr class="border-stroke">
+	{{/each}}
+
+	<div class="both"></div>
+	{{> AddPropertyButton}}
+</template>
+
+<template name="HomeNoProperties">
+	<div class="prop-create-wrap">
+		<a href="{{ pathFor 'propStep1'}}" class="prop-btn-wrap">
+			<span class="btn__circle btn--watermelon btn__text--white auto" >+</span>
+			<div class="pulse_ring"></div>
+			<span class="btn__text">Create a property profile</span>
+		</a>
+		<h6 class="text__start">To get started create a property profile.<br>
+			<span class="small">(it takes less than 2 minutes)</span>
+		</h6>
+	</div>
+</template>
+
+<template name="AddPropertyButton">
+	<div class="add-property__button-wrap">
+		<a href="{{ pathFor 'propStep1'}}" class="prop-btn-wrap">
+			<span class="btn__circle btn--watermelon btn__text--white auto" >+</span>
+			<div class="pulse_ring"></div>
+			<span class="btn__text">Add another property</span>
+		</a>
+	</div>
+</template>

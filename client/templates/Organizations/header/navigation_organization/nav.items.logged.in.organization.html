@@ -1,0 +1,50 @@
+	<template name="NavItemsLoggedInOrganization">
+
+		<li class="nav__item"><a href="{{ pathFor 'bidsAccepted'}}" class="a-mint">
+			Bids Accepted: {{bidsAcceptedCount}}
+		</a></li>
+		<li class="nav__item"><a href="{{ pathFor 'cleaningsNeeded'}}" class="a-watermelon">
+			Cleanings Needed
+		</a></li>
+		<li><a href="{{ pathFor 'help'}}">
+			Help
+		</a></li>
+
+		<!-- Dropdown -->
+		<li class="dropdown">
+			<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+				<img src="{{userAvatar}}" alt="" class="avatarTest"/>
+				<b class="caret"></b>
+			</a>
+
+			<ul class="dropdown-menu account-menu__list">
+				<!-- {{#if currentUser}} -->
+					<li class="dropdown-header account-menu__item">
+						Hello {{currentUser.services.facebook.first_name}},
+					</li>
+					<li class="account-menu__item">
+						<a href="{{ pathFor 'home' }}">Home</a>
+					</li>
+					<li class="account-menu__item">
+						<a href="{{ pathFor 'businessAccount'}}">Business Account</a>
+					</li>
+					<li class="account-menu__item">
+						<a href="{{ pathFor 'businessSettings'}}">Settings</a>
+					</li>
+					<li class="account-menu__item">
+						<a href="{{ pathFor 'home'}}">Clean</a>
+					</li>
+					<li class="account-menu__item">
+						<a href="{{ pathFor 'home' }}" id="logout">Logout</a>
+					</li>
+				<!-- {{else}}
+					<li class="account-menu__item">
+						<a href="{{ pathFor 'home' }}" >
+							<button id="facebook-login" class="btn btn-default">Login with Facebook</button>
+						</a>
+					</li>
+				{{/if}} -->
+			</ul>
+		</li>
+
+	</template>

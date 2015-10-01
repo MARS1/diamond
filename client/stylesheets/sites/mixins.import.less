@@ -1,0 +1,23 @@
+// All mixins should be the last declared property in a style block
+.background {
+	background-size: 100%;
+	background-repeat: no-repeat;
+}
+.logo--mint {
+	background: url('img/svg/logos/klenly-logo-mint.svg');
+	background-position: center 70%;
+	.background;
+}
+.logo--watermelon {
+	background: url('img/svg/logos/klenly-logo-watermelon.svg');
+	background-position: center 70%;
+	.background;
+}
+.transition {
+	transition: all .25s ease-in-out;
+}
+.invisible {
+	border-left: 4px solid rgba(255, 255, 255, 0);
+	border-right: 4px solid rgba(255, 255, 255, 0);
+	border-top: 4px solid rgba(255, 255, 255, 0);
+}

@@ -1,0 +1,49 @@
+<template name="displayProperties">
+  <div class="container-fluid">
+    <div class="row-fluid clearfix">
+      <span class="col-xs-6"> 
+        <h4> Klenly, LLC </h4>
+      </span>
+      <span class="col-xs-6 text-right">
+        <a href="{{pathFor 'job.property'}}" class="btn btn-default"> + Create Job Post </a>
+      </span>
+    </div>
+  </div>
+  <hr />
+  {{#if zeroProps}}
+    {{>homeNoProperties}}
+  {{else}}
+    {{>homeHasProperties}}
+  {{/if}}
+</template>
+
+
+<template name="homeHasProperties">
+  <!-- if there's some properties, show the property stack. -->
+  {{#each properties}}
+    <div>
+      <div> {{address}} </div>
+      <div> Property Type: {{typeOfProp}} </div>
+      <div> Bedrooms: {{noBedrooms}} </div>
+      <div> Bathrooms: {{noBathrooms}} </div>
+      <div> Square Feet: {{sqFeet}} </div>
+      <div> Levels: {{levels}} </div>
+      <div> 
+        <button fxn="delete" data-id="{{_id}}"> delete </button>
+        {{#if property_has_job _id}}
+            <button fxn="view_job" data-id="{{_id}}"> ( view job post ) </button>
+        {{else}}
+            <a href="{{pathFor route='job.property' propertyId=_id}}"> + new job post </a>
+        {{/if}}
+      </div>
+    </div>
+    <hr />
+  {{/each}}
+  <a href="{{pathFor route='property.address'}}"> + add another </a>
+</template>
+
+<template name="homeNoProperties">
+  <!-- if there's no properties, show them the good ol' "home" screen. -->
+  You have no properties. 
+  <a href="{{pathFor route='property.address'}}"> + add one </a>
+</template>

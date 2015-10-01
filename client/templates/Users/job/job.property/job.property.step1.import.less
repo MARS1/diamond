@@ -1,0 +1,399 @@
+@media (min-width: 0px) {
+	.klenly__job-post--steps {
+		height: 65px;
+		.block;
+		.fullw;
+		.lists-none;
+		li {
+			width: 21%;
+			margin-left: 15px;
+			font-size: @large;
+			line-height: 18px;
+			padding-top: 10px;
+			.uppercase;
+			.center;
+			.left;
+			.inline-block;
+		}
+		li:first-child {
+			margin-left: 0;
+		}
+	}
+	.klenly__job-post--step1 {
+		.form-row {
+			width: 100%;
+			padding: 20px;
+			.left;
+			.both;
+		}
+		.form-row:hover {
+			background: @pale-grey;
+		}
+		.form-row {
+			.select-property {
+				border: 1px solid @lt-grey;
+			}
+			.select-propertyselected {
+				border: 1px solid @mint3;
+			}
+			.select-property,
+			.select-propertyselected {
+				width: 100%;
+				min-height: 230px;
+				margin-bottom: 20px;
+		    cursor: pointer;
+				.border-radius(5px);
+				.prop-profile-avatar {
+					width: 100%;
+					height: 100px;
+					border-radius: 3px 3px 0 0;
+					background: @lt-grey;
+					.block;
+					.left;
+				}
+				.prop-address-title {
+					-webkit-user-select: none; /* Chrome/Safari */
+					-moz-user-select: none; /* Firefox */
+					-ms-user-select: none; /* IE10+ */
+					font-size: @h6;
+					line-height: 24px;
+					color: @dk-grey;
+					padding: 10px;
+					.light;
+					.block;
+					.left;
+				}
+			}
+		}
+		.form-row {
+			.form-group {
+				.select-property:hover,
+				.select-propertyselected {
+					background: @mint3;
+					border: 1px solid @mint3;
+					.border-radius(5px);
+					.prop-address-title {
+						color: @white;
+					}
+				}
+			}
+		}
+		.form-row {
+			.form-group {
+				.af-radio-group,
+				.af-checkbox-group {
+					font-size: @h6;
+				}
+			}
+		}
+		.form-row {
+			.form-group {
+				.af-radio-group {
+					label {
+						margin-left: 10px;
+						line-height: 35px;
+						width: auto;
+						color: @mint3;
+						.relative;
+						.tleft;
+						.left;
+						.inline;
+						input[type=radio] {
+							top: 6px;
+							margin-left: -30px;
+							.relative;
+							.inline-block;
+						}
+					}
+				}
+			}
+		}
+		.form-row.cleaning-frequency__list,
+		.form-row.cleaning-type__list{
+			.form-group {
+				.af-radio-group {
+					label {
+						width: 44%;
+						margin-right: 0;
+					}
+				}
+			}
+		}
+		.form-row {
+			.form-group.has-error{
+				.help-block {
+					margin: 0;
+					padding: 15px 0;
+					.both;
+				}
+			}
+		}
+		.form-row {
+			.form-group {
+				textarea.form-control {
+					width: 100%;
+					height: 77px;
+					max-height: 100px;
+					line-height: 24px;
+					padding: 10px;
+					font-weight: 200;
+					font-size: @h6;
+					resize: vertical;
+				}
+			}
+		}
+		.form-row {
+			.form-group {
+				.af-checkbox-group {
+					label {
+						color: @mint3;
+					}
+				}
+			}
+		}
+		.form-row.additional-services__list,
+		.form-row.flooring-types__list {
+			.form-group {
+				.af-checkbox-group {
+					label {
+						width: 44%;
+						padding: 0;
+						line-height: 30px;
+						.tleft;
+						.inline-block;
+						.left;
+						input[type=checkbox] {
+							margin-left: 0;
+							.relative;
+						}
+					}
+				}
+			}
+		}
+		.form-row.pets__list {
+			.form-group {
+				.af-checkbox-group {
+					label {
+						width: 96px;
+						padding: 0;
+						line-height: 30px;
+						.tleft;
+						.inline-block;
+						.left;
+						input[type=checkbox] {
+							margin-left: 0;
+							.relative;
+						}
+					}
+				}
+			}
+		}
+		h6 {
+			color: @dk-grey;
+			margin-top: 10px;
+			margin-bottom: 30px;
+			line-height: 24px;
+			.block;
+			.bold;
+		}
+	}
+}
+
+@media (min-width: 555px) {
+	.klenly__job-post--steps {
+		li {
+			margin-left: 27px;
+			font-size: @p;
+		}
+	}
+	.klenly__job-post--step1 {
+		.form-row {
+			.select-property,
+			.select-propertyselected {
+				width: 47%;
+				margin-right: 20px;
+				.inline-block;
+				.left;
+				.prop-profile-avatar {
+					// height: 140px;
+				}
+			}
+			.select-property:nth-child(2),
+			.select-property:nth-child(4),
+			.select-propertyselected:nth-child(2)
+			.select-propertyselected:nth-child(4) {
+				margin-right: 0;
+			}
+			#clean_schedule,
+			#clean_type,
+			#clean_services,
+			#clean_pets,
+			#clean_flooring {
+				fieldset {
+					label {
+						font-size: @p;
+					}
+				}
+			}
+			#clean_services {
+				fieldset {
+					width: 28%;
+				}
+			}
+		}
+		.form-row.cleaning-option__list {
+			.form-group {
+				.af-radio-group {
+					label:nth-child(1) {
+						width: 250px;
+					}
+					label {
+						width: 130px;
+					}
+				}
+			}
+		}
+		.form-row.additional-services__list,
+		.form-row.flooring-types__list {
+			.form-group {
+				.af-checkbox-group {
+					label {
+						width: 30%;
+					}
+				}
+			}
+		}
+		.form-row.cleaning-type__list {
+			.form-group {
+				.af-radio-group {
+					label {
+						width: 120px;
+					}
+				}
+			}
+		}
+		.form-row.pets__list {
+			.form-group {
+				.af-checkbox-group {
+					label {
+						width: 100px;
+					}
+				}
+			}
+		}
+	}
+}
+
+@media (min-width: 665px) {
+	.klenly__job-post--step1 {
+		.form-row {
+			#clean_services {
+				fieldset {
+					width: 20%;
+				}
+			}
+		}
+		.form-row.cleaning-frequency__list {
+			.form-group {
+				.af-radio-group {
+					label {
+						width: 120px;
+					}
+				}
+			}
+		}
+		.form-row.additional-services__list,
+		.form-row.flooring-types__list {
+			.form-group {
+				.af-checkbox-group {
+					label {
+						width: 23%;
+					}
+				}
+			}
+		}
+	}
+}
+
+@media (min-width: 777px) {
+	.klenly__job-post--step1 {
+		.form-row {
+			.select-property,
+			.select-propertyselected {
+				width: 48%;
+				min-height: 280px;
+				margin-right: 18px;
+				.left;
+				.inline-block;
+				.prop-profile-avatar {
+					height: 140px;
+				}
+			}
+			#clean_services {
+				fieldset {
+					width: 17%;
+					label {
+						font-size: 14px;
+					}
+				}
+			}
+		}
+		.form-row.additional-services__list,
+		.form-row.flooring-types__list {
+			.form-group {
+				.af-checkbox-group {
+					label {
+						width: 18%;
+					}
+				}
+			}
+		}
+	}
+}
+
+@media (min-width: 888px) {
+	.klenly__job-post--step1 {
+		.form-row {
+			#clean_services {
+				fieldset {
+					width: 14%;
+				}
+			}
+		}
+		.form-row.additional-services__list,
+		.form-row.flooring-types__list {
+			.form-group {
+				.af-checkbox-group {
+					label {
+						width: 120px;
+					}
+				}
+			}
+		}
+	}
+}
+
+@media (min-width: 999px) {
+	.klenly__job-post--step1 {
+		.form-row {
+			#clean_services {
+				fieldset {
+					width: 12%;
+				}
+			}
+		}
+		.form-row {
+			.form-group {
+				.select-property,
+				.select-propertyselected {
+					width: 32%;
+					margin-right: 18px;
+				}
+				.select-property:nth-child(3),
+				.select-propertyselected:nth-child(3) {
+					margin-right: 0;
+				}
+			}
+		}
+	}
+}

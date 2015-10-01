@@ -1,0 +1,132 @@
+.account--wrap {
+	max-width: 777px;
+	.auto;
+	a {
+		color: @grey;
+	}
+	nav[role="navigation"] {
+		.both;
+	}
+}
+.account__username {
+	color: @dk-grey;
+	.bold;
+}
+
+@media (min-width: 0px) {
+
+	.account__content {
+		padding: 20px 0;
+	}
+
+	.credit-card__content {
+		padding: 20px 0;
+		.both;
+		h6 {
+			max-width: 80%;
+			.inline-block;
+
+		}
+	}
+
+// CONTACT TAB
+
+	.account__contact-form {
+		display: block;
+		max-width: 777px;
+		padding: 0 0 20px;
+		.auto;
+	}
+
+// BILLING TAB
+
+	.ico-cc {
+		width: 180px;
+		text-align: right;
+		height: 40px;
+		.block;
+		.auto;
+		a:visited {
+			color: @btn-primary-color;
+		}
+	}
+	.ico-cc:before {
+		float: left;
+		content: '';
+		width: 30px;
+		height: 20px;
+		margin-right: 10px;
+		background: url('../../img/svg/icons/ico-cc-default.svg');
+		background-position: center center;
+		.background;
+		.inline-block;
+	}
+
+	.credit-card__nav {
+		.card-tab {
+			display: block;
+			width: 48px;
+			height: 29px;
+			margin: auto;
+			margin-bottom: 10px;
+			.background;
+		}
+		.visa {
+			background: url('../../img/svg/icons/ico-visa-default.svg');
+			background-position: center center;
+			.card-tab;
+		}
+		.mastercard {
+			background: url('../../img/svg/icons/ico-master-default.svg');
+			background-position: center center;
+			.card-tab;
+		}
+	}
+	.edit {
+		float: right;
+		padding: 17px 0;
+		.inline-block;
+		.btn__link;
+		a {
+			.btn__link;
+		}
+		a:visited {
+			color: @btn-primary-color;
+		}
+	}
+	.edit:before {
+		content: '';
+		width: 19px;
+		height: 23px;
+		margin-right: 10px;
+		background: url('../../img/svg/icons/ico-edit-default.svg');
+		background-position: center center;
+		.left;
+		.background;
+		.inline-block;
+	}
+	.credit-card__item {
+		margin-top: 20px;
+	}
+}
+
+
+
+@media (min-width: 777px) {
+
+	.credit-card__content {
+		padding: 40px 20px;
+	}
+
+	// CONTACT TAB
+
+	// BILLING TAB
+
+	.ico-cc {
+		width: 175px;
+		.right;
+		padding: 0;
+	}
+
+}
+

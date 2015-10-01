@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="45px" height="45px" viewBox="0 0 45 45" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.3.3 (12081) - http://www.bohemiancoding.com/sketch -->
+    <title>ico-cancel</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="user-createProperty" sketch:type="MSArtboardGroup" transform="translate(-420.000000, -653.000000)" fill="#FFFFFF">
+            <g id="&amp;-Step2" sketch:type="MSLayerGroup" transform="translate(-636.000000, 83.000000)">
+                <g id="checkmark-+-cancel-+-Is-this-your-propert" transform="translate(921.000000, 467.000000)" sketch:type="MSShapeGroup">
+                    <g id="checkmark-+-cancel" transform="translate(115.000000, 83.000000)">
+                        <g id="ico-cancel">
+                            <path d="M64.478,28.949 L55.812,20.282 L42.419,33.674 L29.057,20.317 L20.39,28.987 L33.751,42.341 L20.353,55.741 L29.02,64.406 L42.419,51.006 L55.774,64.366 L64.444,55.703 L51.085,42.341 L64.478,28.949" id="Fill-2"></path>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

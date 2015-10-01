@@ -1,0 +1,91 @@
+
+// 0PX
+
+@media (min-width: 0px) {
+	.header-cont {
+		height: 64px;
+		.auto;
+		.nav__global {
+			padding: 0 0 0 10px;
+			.transition;
+			.nav__item {
+				.a-mint {
+					color: @mint2;
+					&:hover {
+						color: @mint3;
+					}
+				}
+				.a-watermelon {
+					color: @watermelon;
+					&:hover {
+						color: @watermelon2;
+					}
+				}
+				.a-grey {
+					color: @grey;
+					&:hover {
+						color: @dk-grey;
+					}
+				}
+			}
+		}
+	}
+	.nav__list,
+	.account-menu__list{
+		list-style-type: none;
+		li a {
+			text-decoration: none;
+		}
+	}
+	.navbar-header {
+		.logo-header {
+			width: 124px;
+			height: 55px;
+			line-height: 55px;
+			.block;
+		}
+		.logo--mint {
+			.logo-header;
+			.logo--mint;
+		}
+		.logo--watermelon {
+			.logo-header;
+			.logo--watermelon;
+		}
+		.menu {
+			font-size: 7px;
+			height: 10px;
+			line-height: 10px;
+			position: relative;
+			top: -2px;
+			color: @btn-primary-color;
+			text-transform: uppercase;
+			.font-family;
+		}
+	}
+}
+.dropdown-header {
+	padding: 4px 24px;
+}
+.dropdown-menu li a {
+	padding: 12px 24px;
+}
+
+.avatarTest {
+	width: 30px;
+	height: 30px;
+	border-radius: 50%;
+	border: 1px solid grey;
+	.left;
+	.inline-block;
+}
+
+// 777PX
+
+@media (min-width: 777px) {
+	.header-cont {
+		.nav__global {
+			padding: 0 20px 0 20px;
+		}
+	}
+}

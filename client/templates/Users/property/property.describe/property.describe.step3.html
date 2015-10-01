@@ -1,0 +1,87 @@
+<template name="PropertyCreate3">
+  <div class="validation error"> {{errorMessage}} </div>
+  <section class="propStep3__container">
+
+    <div class="container--fixed">
+      <h2 class="watermelon"> {{address}} </h2>
+    </div>
+
+    <section class="coverPhoto__container">
+      <img src="{{coverPhoto}}" />
+    </section>
+
+    <section class="propertyType__container">
+      <h3> Type of property: <span>{{typeOfProp}}</span></h3>
+
+      <form id="typeOfProperty" action="">
+
+        <fieldset class="typeOfProperty__radio-input">
+            <label for="house">House <input id="house" type="radio" value="house" name="propertyType" /></label>
+            <label for="apartment">Apartment <input id="apartment" type="radio" value="apartment" name="propertyType" /></label>
+            <label for="condo">Condo  <input id="condo" type="radio" value="condo" name="propertyType" /></label>
+            <label for="studio">Studio  <input id="studio" type="radio" value="studio" name="propertyType" /></label>
+        </fieldset>
+
+        <fieldset class="typeOfProperty__dropdown-menu">
+          <div class="dropup">
+            <button class="btn-typeOfProperty btn btn--base btn--rect btn__text--white btn--mint dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Select a property type
+              <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+              <li><a href="#"> <label for="house">House <input id="house" type="radio" value="house" name="propertyType" /></label></a></li>
+              <li><a href="#"><label for="apartment">Apartment <input id="apartment" type="radio" value="apartment" name="propertyType" /></label></a></li>
+              <li><a href="#"> <label for="condo">Condo  <input id="condo" type="radio" value="condo" name="propertyType" /></label></a></li>
+              <li><a href="#"><label for="studio">Studio  <input id="studio" type="radio" value="studio" name="propertyType" /></label></a></li>
+            </ul>
+          </div>
+        </fieldset>
+      </form>
+    </section>
+
+    <section class="propertyAttributes__container">
+      <div class="block3" id="noBedrooms">
+        <h6>Bedrooms: <span class="bold">{{noBedrooms}}</span></h6>
+        <div class="toggleBtn__container">
+          <button class="minus">-</button>
+          <button class="plus">+</button>
+        </div>
+      </div>
+
+      <div class="block3" id="noBathrooms">
+        <h6>Bathrooms: <span class="bold">{{noBathrooms}}</span></h6>
+        <div class="toggleBtn__container">
+          <button class="minus">-</button>
+          <button class="plus">+</button>
+        </div>
+      </div>
+
+      <div class="block3" id="sqFeet">
+        <h6>Square Ft: <span class="bold">{{sqFeet}}</span></h6>
+        <div class="toggleBtn__container">
+          <button class="minus">-</button>
+          <button class="plus">+</button>
+        </div>
+      </div>
+
+      <div class="block3" id="levels">
+        <h6>Levels: <span class="bold">{{levels}}</span></h6>
+        <div class="toggleBtn__container">
+          <button class="minus">-</button>
+          <button class="plus">+</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="propertyCreate__buttons">
+      <div class="propertyCreate__buttons--divider">
+        <div class="propertyCreate__buttons--container">
+          <button class="btn btn--base btn--rect btn--cancel"><a href="{{pathFor route='home'}}" class="btn__text--white"> cancel </a></button>
+          <button class="submit btn btn--base btn--rect btn__text--white btn--mint"> create property </button>
+        </div>
+      </div>
+    </section>
+
+  </section>
+
+</template>

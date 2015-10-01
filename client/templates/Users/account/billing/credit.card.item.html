@@ -1,0 +1,31 @@
+<template name="CreditCardItem">
+
+	<div class="credit-card">
+		<div class="credit-card__content">
+			<form class="credit-card-form">
+				<fieldset>
+					<label for="cardType">Card Type:</label>
+					<span>
+						{{cardType}}
+					</span>
+					<!-- <input type="text" name="name" placeholder="Full Name"> -->
+				</fieldset>
+				<fieldset>
+					<label for="nameOnCard">Name on Card:</label>
+					<span>
+						{{nameOnCard}}
+					</span>
+					<!-- <input type="text" name="email" placeholder="Email e.g. name@email.com"> -->
+				</fieldset>
+				<fieldset>
+					<label for="cardNumber">Card Number:</label>
+					<span>
+						{{cardNumber}}
+					</span>
+					<!-- <input type="text" name="phone" placeholder="Best number to reach you "> -->
+				</fieldset>
+			</form>
+		</div>
+	</div>
+
+</template>

@@ -1,0 +1,51 @@
+<template name="JobLayoutUsers">
+
+	<section class="klenly__container animated fadeIn" id="klenlyContainer">
+
+		<section class="klenly__header" id="klenlyHeader">
+			{{> Template.dynamic template=top}}
+		</section>
+
+		<section class="klenly__content animated fadeIn" id="klenlyJobContent">
+			<ul class="klenly__job-post--steps">
+                <li data-route-name="job.property"  class="{{linkCurrent 'job.property'}}">Your Property</li>
+                <li data-route-name="job.story"     class="{{linkCurrent 'job.story'}}">Tell Your Story</li>
+                <li data-route-name="job.contact"   class="{{linkCurrent 'job.contact'}}">Contact Info</li>
+                <li data-route-name="job.access"    class="{{linkCurrent 'job.access'}}">Access</li>
+                <!-- <li data-route-name="job.confirm"   class="{{linkCurrent 'job.confirm'}}">Confirm and Post</li> -->
+            </ul>
+            <hr>
+
+			{{> Template.dynamic template=main}}
+
+			<section class="klenly__job-buttons--container">
+                <hr />
+
+                <button id="cancel" fxn="cancel" class="btn btn--base btn--rect btn__text--white btn--cancel">Cancel</button>
+                {{#if subsReady}}
+                    <button id="save_for_later" fxn="saveForLater" class="btn btn--base btn--rect btn__text--white btn--neutral">Save for later</button>
+                {{else}}
+                    <button disabled id="save_for_later" class="btn btn--base btn--rect btn__text--white btn--neutral">
+                        Looking for draft...
+                    </button>
+                {{/if}}
+                {{#if hasDraft}}
+                    <button fxn="removeDraft" data-property-id="{{propertyId}}"> - remove draft </button>
+                {{/if}}
+                <button type="submit" fxn="submitJobProperty" class="btn btn--base btn--rect btn__text--white btn--neutral">
+                  next to step 2
+                </button>
+
+			</section>
+
+		</section>
+
+		<!-- <div class="klenly__pusher" id="klenlyPusher"></div> -->
+
+	</section>
+
+	<section class="klenly__footer" id="klenlyFooter">
+        {{> Template.dynamic template=bottom}}
+	</section>
+
+</template>

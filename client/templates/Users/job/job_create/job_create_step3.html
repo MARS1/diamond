@@ -1,0 +1,30 @@
+<template name="JobCreateStep3">
+
+	<div class="steps__container">
+		<section class="steps">
+			{{> StepsNav}}
+		</section>
+
+		<section class="step__content">
+			Here goes the content for Step 3
+		</section>
+	</div>
+
+	<section class="step__options">
+		<div class="step__options--wrap">
+			{{> Step3Continue}}
+		</div>
+	</section>
+
+</template>
+
+<template name="Step3Continue">
+	<div class="step__options--left">
+		<a href="{{ pathFor 'home' }}" class="btn btn--base btn--rect btn__text--white btn--cancel">Cancel</a>
+	</div>
+
+	<div class="step__options--right">
+		<a href="{{ pathFor 'home' }}" class="btn btn--base btn--rect btn__text--white btn--neutral">Save for later</a>
+		<a href="{{ pathFor 'jobCreate4' }}" class="btn btn--base btn--rect btn__text--white btn--mint">Final Step - Confirm Job Post</a>
+	</div>
+</template>

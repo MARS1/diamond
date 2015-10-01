@@ -1,0 +1,121 @@
+@media (min-width: 0) {
+	.steps {
+		height: 70px;
+		.header-padding-top;
+		.both;
+	}
+	.steps__list {
+		width: 90%;
+		height: 8px;
+		margin: auto;
+		background: @lt-grey;
+		.border-radius(10px);
+		.relative;
+		li:first-child {
+			.relative;
+		}
+		li:last-child {
+			.relative;
+		}
+		li {
+			width: 23%;
+			font-size: 12px;
+			.uppercase;
+			.nopm;
+			.inline-block;
+			a {
+				.block;
+				.nopm;
+				.center;
+				color: @grey;
+				.steps__item {
+					top: -20px;
+					width: 44px;
+					font-size: @p;
+					background: @lt-grey;
+					color: @white;
+					.height(44px);
+					.border-radius(50%);
+					.relative;
+					.nopm;
+					.inline-block;
+				}
+				.active {
+						background: @watermelon;
+				}
+				.steps__title {
+					.none;
+				}
+			}
+			a:hover {
+				.steps__item {
+					color: @white;
+					background: @watermelon;
+				}
+				span {
+					color: @watermelon;
+				}
+			}
+		}
+	}
+	.steps__container {
+		max-width: 777px;
+		min-height: 333px;
+		margin: 20px 0;
+		.auto;
+	}
+	.step__options {
+		border-top: 1px solid @lt-grey;
+		.both;
+		.step__options--wrap {
+			width: 100%;
+			.height(77px);
+			.left;
+			.step__options--left {
+				.left;
+			}
+			.step__options--right {
+				.right;
+			}
+		}
+	}
+	#jobPropertyForm .form-group>label,
+	#jobStoryForm .form-group>label,
+	#jobConfirmForm .form-group>label {
+		.none;
+	}
+	#jobPropertyForm .form-group,
+	#jobStoryForm .form-group,
+	#jobConfirmForm .form-group {
+		height: auto;
+	}
+}
+
+@media (min-width: 500px) {
+	.steps {
+		height: 130px;
+	}
+	.steps__list {
+		max-width: 777px;
+		// width: 75%;
+		li:first-child {
+			width: 20%;
+			left: -53px;
+			// left: -38px;
+		}
+		li:last-child {
+			width: 20%;
+			right: -53px;
+			// right: -40px;
+		}
+		li {
+			width: 30%;
+			.left;
+			a {
+				.steps__title {
+					.block;
+				}
+			}
+		}
+	}
+}

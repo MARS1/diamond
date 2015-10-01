@@ -1,0 +1,16 @@
+<template name="CreditCardNav">
+	<nav role="navigation" class="credit-card__nav">
+		<ul id="cardTabs" class="nav nav-tabs" role="tablist">
+			{{> CreditCardNavItem}}
+		</ul>
+	</nav>
+</template>
+
+<template name="CreditCardNavItem">
+	<li class="" role="presentation">
+		<a href="#cc" aria-controls="visa" role="tab" data-toggle="tab">
+			<span class="{{css}}"></span>
+			{{cardType}} 1878
+		</a>
+	</li>
+</template>

@@ -1,0 +1,75 @@
+<template name="jobConfirm">
+        <h2> Confirm and you're done! </h2>
+        <div> 
+            Confirm that your job post is accurate, and that you've accepted the terms
+            and conditions at the bottom. Remember, once you've saved your post it
+            can't be edited! 
+        </div>
+
+        <br />
+
+        {{#autoForm collection="Jobs" id="jobConfirmForm" type="insert" doc=jobConfirmDoc}}
+            <fieldset>
+
+                <!-- step 1 -->
+                {{>afQuickField name="propertyId"}}
+                {{>afQuickField name="cleanDate"}}
+                {{>afQuickField name="cleanSchedule"}}
+                {{#if afFieldValueIs name="cleanSchedule" value="regular"}}
+                    {{>afQuickField name="cleanFrequency"}}
+                {{/if}}
+                {{>afQuickField name="cleanType"}}
+                {{>afQuickField name="cleanServices" options=cleanServiceOptions}}
+                <!-- clean services: {{currentValue 'cleanServices'}} -->
+                {{>afQuickField name="petTypes" options=petOptions}}
+                {{>afQuickField name="petDetails"}}
+                {{>afQuickField name="flooringTypes" options=flooringOptions}}
+                {{#if afFieldValueContains name="flooringTypes" value="other"}}
+                    {{>afQuickField name="flooringDetails"}}
+                {{/if}}
+
+                <!-- step 2 -->
+                <h3> 
+                    Tell us what's special to you about your property
+                    (optional) 
+                </h3>
+                <div> 
+                    Does your property have an interesting history or is there
+                    something you'd like to share? 
+                </div>
+                {{>afQuickField name="specialDetails"}}
+                <br />
+                <h3> 
+                    What areas of the house should be given the most attention? 
+                </h3>
+                <div> 
+                    Include details about areas that need the most attention or
+                    what to be careful around. 
+                </div>
+                {{>afQuickField name="attentionDetails"}}
+
+                <!-- step 3 -->
+                {{>afQuickField name="contactName"}}
+                {{>afQuickField name="contactEmail"}}
+                {{>afQuickField name="contactPhone"}}
+
+                <!-- step 4 -->
+                {{>afQuickField name="accessType"}}
+                {{#if afFieldValueIs name="accessType" value="off_premise"}}
+                    {{>afQuickField name="accessInstructions"}}
+                {{/if}}
+
+                <h3> Terms and Conditions </h3>
+                <div> Lorem ipsum etc... </div>
+                <div> 
+                    I agree to the terms &amp; conditions of Klenly LLC
+                </div>
+                {{>afQuickField name="termsAgreed"}}
+
+            </fieldset>
+            <button type="submit" class="btn btn-success"> post your job </button>
+
+        {{/autoForm}}
+
+        <br />
+</template>

@@ -1,0 +1,95 @@
+<template name="JobProperty">
+  <div class="klenly__job-post--step1">
+    {{#autoForm schema=jobPropertySchema id="jobPropertyForm" type="normal" doc=jobPropertyData}}
+      <div class="form-row">
+        {{#if routeHasProp}}
+          {{>afQuickField type="hidden" name="propertyId"}}
+        {{else}}
+          <h6>Which property will this job be for?</h6>
+          {{>afQuickField name="propertyId"}}
+        {{/if}}
+      </div>
+
+      <div class="form-row">
+        <h6>Please select a cleaning date</h6>
+        <form id="clean_date" class="form-item">
+          {{>afQuickField name="cleanDate"}}
+        </form>
+      </div>
+
+      <div class="form-row cleaning-option__list">
+        <h6>How often do you need residential cleaning? </h6>
+        {{>afQuickField name="cleanSchedule"}}
+      </div>
+
+
+      <div class="form-row cleaning-frequency__list">
+        {{#if afFieldValueIs name="cleanSchedule" value="regular"}}
+          <h6>How frequently would you like your property cleaned? </h6>
+          {{>afQuickField name="cleanFrequency"}}
+        {{/if}}
+      </div>
+
+      <div class="form-row cleaning-type__list">
+        <h6> What kind of effort does your first cleaning require? </h6>
+        {{>afQuickField name="cleanType"}}
+      </div>
+
+      <div class="form-row additional-services__list">
+        <h6> Any additional services required? </h6>
+        {{>afQuickField name="cleanServices" options=cleanServiceOptions}}
+
+        <!-- <form id="clean_services" class="form-item">
+          <fieldset>
+            <input type="checkbox" id="fridge" checked="{{contains new_job.clean_services 'fridge'}}" value="fridge" />
+            <label for="fridge" attr="fridge" class="label-break ico__fridge"> Inside Fridge </label>
+          </fieldset>
+          <fieldset>
+            <input type="checkbox" id="oven" checked="{{contains new_job.clean_services 'oven'}}" value="oven" />
+            <label for="oven" attr="oven" class="label-break ico__oven"> Inside Oven </label>
+          </fieldset>
+          <fieldset>
+            <input type="checkbox" id="laundry" checked="{{contains new_job.clean_services 'laundry'}}" value="laundry" />
+            <label for="laundry" attr="laundry" class="label-break ico__laundry"> Laundry Wash + Dry </label>
+          </fieldset>
+          <fieldset>
+            <input type="checkbox" id="hood" checked="{{contains new_job.clean_services 'hood'}}" value="hood" />
+            <label for="hood" attr="hood" class="label-break ico__hood"> Hood Cleaning </label>
+          </fieldset>
+          <fieldset>
+            <input type="checkbox" id="walls" checked="{{contains new_job.clean_services 'walls'}}" value="walls" />
+            <label for="walls" attr="walls" class="label-break ico__walls"> Interior Walls </label>
+          </fieldset>
+          <fieldset>
+            <input type="checkbox" id="cabinets" checked="{{contains new_job.clean_services 'cabinets'}}" value="cabinets" />
+            <label for="cabinets" attr="cabinets" class="label-break ico__cabinets"> Inside Cabinets </label>
+          </fieldset>
+          <fieldset>
+            <input type="checkbox" id="windows" checked="{{contains new_job.clean_services 'windows'}}" value="windows" />
+            <label for="windows" attr="windows" class="label-break ico__windows"> Interior Windows </label>
+          </fieldset>
+        </form> -->
+      </div>
+
+      <div class="form-row pets__list">
+        <h6> Do you have any pets? </h6>
+        {{>afQuickField name="petTypes" options=petOptions}}
+        {{>afQuickField name="petDetails"}}
+      </div>
+
+      <div class="form-row flooring-types__list">
+        <h6>Flooring types in your home: </h6>
+        {{>afQuickField name="flooringTypes" options=flooringOptions}}
+        {{#if afFieldValueContains name="flooringTypes" value="other"}}
+          {{>afQuickField name="flooringDetails"}}
+        {{/if}}
+
+      </div>
+      <div class="both">
+        <button type="submit" fxn="submitJobProperty" class="btn btn--base btn--rect btn__text--white btn--neutral">
+          next
+        </button>
+      </div>
+    {{/autoForm}}
+  </div>
+</template>

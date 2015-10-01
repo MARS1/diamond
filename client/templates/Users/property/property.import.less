@@ -1,0 +1,330 @@
+@media (min-width: 0px) {
+	.map__container {
+		width: 100%;
+		max-width: 100%;
+		height: 370px;
+		.relative;
+		.address__container {
+			width: 100%;
+			z-index: 100;
+			height: 370px;
+			.padding-top(20px);
+			.center;
+			.absolute;
+			h1 {
+				font-size: 1.125em;
+				color: @watermelon;
+				font-weight: 600;
+				.center;
+				.padding-both(20px);
+				.height(20px);
+			}
+			.property__input {
+				width: 80%;
+				height: 100px;
+				padding-top: 20px;
+				.block;
+				.auto;
+				input[name="propertyAddress"] {
+					height: 44px;
+					margin: 0;
+				}
+				input[name="propertyButton"] {
+					width: 50%;
+					.btn-margin-both(5px);
+					.right;
+				}
+				.btn-property--cancel {
+					line-height: 24px;
+					.margin-both(5px);
+					.left;
+				}
+			}
+			.property__button-container {
+				.btn--icon-x {
+					background: url('../img/svg/icons/ico-x.svg');
+					width: 30px;
+					height: 30px;
+					background-size: 100%;
+					background-repeat: no-repeat;
+					background-position: center center;
+					top: 28%;
+					.block;
+					.auto;
+					.relative;
+				}
+
+				.btn--icon-checkmark {
+					background: url('../img/svg/icons/ico-check.svg');
+					width: 44px;
+					height: 44px;
+					background-size: 100%;
+					background-repeat: no-repeat;
+					background-position: center center;
+					top: 18%;
+					.block;
+					.auto;
+					.relative;
+
+				}
+			}
+		}
+		.address__container.background-opaque {
+			background: rgba(255, 255, 255, 0.75);
+		}
+		.address__container {
+			.property__button-container {
+				width: 158px;
+				height: 64px;
+				.padding-top(186px);
+				.auto;
+				a {
+					line-height: 64px;
+					.left;
+				}
+				a:first-child {
+					margin-right: 24px;
+				}
+			}
+		}
+	}
+	.propStep3__container {
+		h2 {
+			font-size: @h4;
+			line-height: 30px;
+		}
+		h3 {
+			font-size: @h5;
+		}
+		h2,
+		h3 {
+			width: 100%;
+			max-width: 737px;
+			text-align: center;
+			.padding-both(20px);
+			.block;
+			.auto;
+		}
+		.coverPhoto__container {
+			width: 100%;
+			height: 188px;
+			background: @pale-grey;
+			.left;
+		}
+		.propertyType__container {
+			width: 100%;
+		}
+		.propertyAttributes__container,
+		.propertyCreate__buttons {
+			width: 100%;
+			max-width: 737px;
+		}
+		.propertyCreate__buttons {
+			padding: 0 20px;
+		}
+		.propertyType__container,
+		.propertyAttributes__container,
+		.propertyCreate__buttons {
+			.both;
+			.auto;
+			h3 {
+				span {
+					text-transform: uppercase;
+					color: @mint;
+				}
+			}
+			#typeOfProperty {
+				width: 100%;
+				padding: 0 20px;
+				.auto;
+				.typeOfProperty__dropdown-menu {
+					display: block;
+					.dropdown {
+					}
+					.btn-typeOfProperty {
+						width: 100%;
+						height: 44px;
+					}
+				}
+				.typeOfProperty__radio-input {
+					display: none;
+				}
+				h6 {
+					width: 150px;
+					line-height: 56px;
+					margin-right: 10px;
+					.left;
+				}
+				label {
+					width: auto;
+					height: 56px;
+					line-height: 56px;
+					font-size: @h4;
+					text-transform: none;
+					color: @mint;
+					margin-right: 28px;
+					text-align: left;
+					.bold;
+					.left;
+				}
+				fieldset {
+					height: 56px;
+					padding: 0;
+					margin: 0;
+					input[type=radio] {
+						margin-left: 4px;
+						top: 18px;
+						.relative;
+					}
+				}
+			}
+		}
+		.propertyAttributes__container {
+			height: 200px;
+			.block3 {
+				width: 50%;
+				margin-right: 0px;
+				.left;
+				.toggleBtn__container {
+					width: 108px;
+					.auto;
+					button {
+						height: 44px;
+						width: 54px;
+						font-size: 1.5em;
+						color: @dk-grey;
+						background: @pale-grey;
+						.left;
+						.inline-block;
+					}
+					button.minus:hover,
+					button.plus:hover {
+						color: @white;
+					}
+					button.minus:hover {
+						background: @watermelon;
+					}
+					button.plus:hover {
+						background: @mint;
+					}
+					button:first-child {
+						border-radius: 5px 0 0 5px;
+						border-style: solid;
+						border-width: 1px 0 1px 1px;
+						border-color: darken(@pale-grey, 15%);
+					}
+					button:last-child {
+						border-radius: 0 5px 5px 0;
+						border-style: solid;
+						border-width: 1px 1px 1px 1px;
+						border-color: @lt-grey;
+					}
+				}
+				h6 {
+					.height(44px);
+					.center;
+				}
+			}
+			.block3:last-child {
+				margin-right: 0;
+			}
+		}
+		.propertyCreate__buttons {
+			.propertyCreate__buttons--divider {
+				width: 100%;
+				max-width: 737px;
+				height: 80px;
+				border-top: 1px solid @lt-grey;
+				padding-top: 20px;
+				.propertyCreate__buttons--container {
+					width: 250px;
+					.right;
+				}
+			}
+		}
+	}
+}
+
+@media (min-width: 555px) {
+	.map__container {
+		height: 659px;
+		.address__container {
+			height: 659px;
+			line-height: 370px;
+			h1 {
+				font-size: @h1;
+				.padding-both(40px);
+			}
+			.property__input {
+				width: 444px;
+				input[name="propertyButton"] {
+					width: 222px;
+					.right;
+					.relative;
+					.margin-both-auto(10px);
+				}
+				.btn-property--cancel {
+					line-height: 24px;
+					.margin-both(10px);
+					.left;
+				}
+			}
+		}
+		.address__container.address__container--padding_top {
+			.padding-top(170px);
+		}
+		.address__container {
+			.property__button-container {
+				padding-top: 20px;
+			}
+		}
+	}
+	.propStep3__container {
+		.propertyType__container {
+			#typeOfProperty {
+				width: 540px;
+				.typeOfProperty__dropdown-menu {
+					display: none;
+				}
+				.typeOfProperty__radio-input {
+					display: block;
+				}
+				fieldset {
+					label {
+						margin-right: 12px;
+					}
+				}
+			}
+		}
+	}
+}
+
+@media (min-width: 777px) {
+	.propStep3__container {
+		h2 {
+			font-size: @h2;
+		}
+		h3 {
+			font-size: @h3;
+		}
+		.propertyAttributes__container {
+			height: 120px;
+			.block3 {
+				width: 21%;
+				margin-right: 30px;
+			}
+		}
+		.propertyType__container {
+			#typeOfProperty {
+				width: 580px;
+				height: auto;
+				padding: 20px;
+				fieldset {
+					label {
+						margin-right: 20px;
+					}
+				}
+			}
+		}
+	}
+}

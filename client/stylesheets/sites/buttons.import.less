@@ -1,0 +1,116 @@
+.btn {
+	.transition;
+}
+.btn--base {
+	padding: 10px 20px;
+}
+.btn--rect {
+	.border-radius(5px);
+	line-height: 24px;
+}
+.btn-radius {
+	// custom.bootstrap.less
+	border-radius: @border-radius-large;
+}
+.btn__text--white {
+	color: @white;
+}
+.btn--mint {
+	background: @mint;
+	&:hover {
+		background: @mint2;
+	}
+}
+.btn--watermelon {
+	background: @watermelon;
+	&:hover {
+		background: @watermelon2;
+	}
+}
+.btn--neutral {
+	background: @md-grey;
+	&:hover {
+		background: @md-grey2;
+	}
+}
+.btn--cancel {
+	background-color: @watermelon3;
+	&:hover {
+		background-color: darken(@watermelon3, 15%);
+	}
+}
+
+.btn--accept {
+	background: @mint2;
+	&:hover {
+		background: @mint3;
+	}
+}
+.btn--off {
+	background: @lt-grey;
+	&:hover {
+		background: @lt-grey;
+	}
+}
+.btn-margin-all(@margin) {
+	margin: @margin;
+}
+.btn-dimension(@w,@h) {
+	width: @w;
+	height: @h;
+}
+.btn__circle--base {
+	.btn-radius;
+	.btn;
+}
+.btn__circle {
+	.block;
+	.btn-dimension(44px,44px);
+	.btn-margin-all(30px);
+	.btn__circle--base
+}
+.btn__circle-no-margin {
+	.block;
+	.btn-dimension(44px,44px);
+	.btn__circle--base
+}
+.btn__circle--lrg {
+	.btn-dimension(64px, 64px);
+	.btn__circle--base;
+}
+.btn__link {
+	color: @btn-primary-color;
+}
+
+.btn-margin-both(@margin) {
+	margin-top: @margin;
+	margin-bottom: @margin;
+	margin-left: 0;
+	margin-right: 0;
+}
+.btn-margin-top(@margin) {
+	margin-top: @margin;
+}
+.btn-margin-bottom(@margin) {
+	margin-bottom: @margin;
+}
+// Pulsating ring
+.pulse_ring {
+  border: 3px solid #FF526C;
+  height: 48px;
+  width: 48px;
+  left: 96px;
+  top: -2px;
+  -webkit-animation: pulsate 2s ease-out;
+  -webkit-animation-iteration-count: infinite;
+  opacity: 0;
+	.auto;
+  .absolute;
+  .border-radius(30px);
+}
+
+@-webkit-keyframes pulsate {
+    0% {-webkit-transform: scale(0.1, 0.1); opacity: 0.0;}
+    50% {opacity: 1.0;}
+    100% {-webkit-transform: scale(1.2, 1.2); opacity: 0.0;}
+}

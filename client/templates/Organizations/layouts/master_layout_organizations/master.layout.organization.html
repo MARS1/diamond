@@ -1,0 +1,21 @@
+<template name="MasterLayoutOrganization">
+
+	<section class="klenly__container" id="klenlyContainer">
+
+		<section class="klenly__header" id="klenlyHeader">
+			{{> Template.dynamic template=top}}
+		</section>
+
+		<section class="klenly__content" id="klenlyContent">
+			{{> Template.dynamic template=main}}
+		</section>
+
+		<section class="klenly__pusher" id="klenlyPusher"></section>
+
+	</section>
+
+	<section class="klenly__footer" id="klenlyFooter">
+			{{> Template.dynamic template=bottom}}
+	</section>
+
+</template>

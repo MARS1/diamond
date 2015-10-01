@@ -1,0 +1,30 @@
+<template name="JobAccess">
+  {{#autoForm type="normal" id="jobAccessForm" schema=jobAccessSchema doc=jobAccessDoc}}
+    <h3>
+      How do you prefer to grant access to 
+      the cleaning service provider?  
+    </h3>
+    {{>afQuickField name="accessType"}}
+    {{#if afFieldValueIs name="accessType" value="off_premise"}}
+      {{>afQuickField name="accessInstructions"}}
+    {{/if}}
+    <button type="submit" class="btn btn-primary"> next </button>
+  {{/autoForm}}
+
+
+  <!--
+  <div>
+    <label for="hihi"> I'll be home to let them in </label>
+    <input type="radio" name="access_type" checked="{{eq new_job.access_type 'on_premise'}}" value="on_premise" />
+  </div>
+
+  <div>
+    <label for="hihi"> I'll leave the key with instructions </label>
+    <input type="radio" name="access_type" checked="{{eq new_job.access_type 'off_premise'}}" value="off_premise" />
+  </div>
+
+  <textarea placeholder="Leave detailed instructions.">
+    {{new_job.access_instructions}}
+  </textarea>
+  -->
+</template>

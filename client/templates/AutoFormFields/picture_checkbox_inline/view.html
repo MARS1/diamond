@@ -1,0 +1,45 @@
+<template name="pictureCheckboxInline">
+
+  <style type='text/css' rel='stylesheet'>
+    span[kl-selector] {
+      display: inline-block;
+      width: 10em;
+      height: 10em;
+      position: relative;
+    }
+    span[kl-selected="true"] {
+      border: red solid thin;
+    }
+    span[kl-selector] img {
+      width: 100%;
+    }
+  </style>
+
+  <div {{dsk}}>
+    <ul>
+      {{#each this.items}}
+<!-- 
+This span element can be styled however you want.  When it's selected, its
+kl-selected attribute will be "true", and when it is not selected, its
+kl-selected attribute will be false. You can use this to create unique 
+styles using a selector like `span[kl-selected="true]`. -->
+
+        <span
+          kl-selector
+          data-id="{{_id}}"
+          kl-selected="{{isSelected ../value this.value}}"
+          data-value="{{value}}">
+
+          <!-- the image's source comes form the autoform object in the
+          schema. -->
+          <div>
+            <img src="{{src}}" class="picture-select-img" />
+          </div>
+          <div class="center">{{value}}</div>
+
+        </span>
+      {{/each}}
+    </ul>
+  </div>
+
+</template>

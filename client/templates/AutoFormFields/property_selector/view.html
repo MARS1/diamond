@@ -1,0 +1,32 @@
+<template name="propertySelector">
+    <input type="text" value="{{currVal}}" kl-prop-value {{this.atts}} style="display:none" />
+    <!-- the input is required as a carrier for the value. -->
+    <ul id="jobCreationPropertyList">
+        {{#each properties}}
+            <!-- the currently selected li gets a .selected class. -->
+            <li class="btn btn-default select-property{{#if eq _id ../reactiveValue}}selected{{/if}}"
+                kl-property
+                data-id="{{_id}}">
+                <span class="prop-profile-avatar"></span>
+                <span class="prop-address-title">
+                    {{address}}
+                </span>
+            </li>
+        {{/each}}
+    </ul>
+
+<!--  NOTE:
+
+    This template will be wrapped by autoform in a div.form-group, which
+    will become div.form-group.has-error when the field is invalid.
+    Therefore, to add visual feedback during invalidation within this
+    template, you could add some css like the following:
+
+        /* only highlight the buttons in a red border when the <li> in
+         * property-selector is invalid */
+
+        div.form-group.has-error li[kl-property] {
+            border : red solid thin;
+        }
+-->
+</template>

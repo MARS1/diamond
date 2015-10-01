@@ -1,0 +1,29 @@
+<template name="JobContact">
+  {{#autoForm schema=jobContactSchema type="normal" id="jobContactForm" doc=jobContactDoc}}
+    {{>afQuickField name="contactName"}}
+    {{>afQuickField name="contactEmail"}}
+    {{>afQuickField name="contactPhone"}}
+    <button type="submit">next</button>
+    <br />
+  {{/autoForm}}
+
+  <!--
+  <form>
+    <div>
+      <label for="contact_name"> Name </label>
+      <input type="text" required id="contact_name" value="{{new_job.contact_name}}" />
+    </div>
+
+    <div>
+      <label for="contact_email"> Email </label>
+      <input type="email" required id="contact_email" value="{{new_job.contact_email}}" />
+    </div>
+
+    <div>
+      <label for="contact_phone"> Phone </label>
+      <input type="phone" required id="contact_phone" value="{{new_job.contact_phone}}" />
+    </div>
+
+  </form>
+  -->
+</template>

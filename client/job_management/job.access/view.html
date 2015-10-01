@@ -1,0 +1,10 @@
+<template name="jobAccess">
+  {{#autoForm type="normal" id="jobAccessForm" schema=jobAccessSchema doc=jobAccessDoc}}
+    <h3>  How do you prefer to grant access to the cleaning service provider?  </h3>
+    {{>afQuickField name="accessType"}}
+    {{#if afFieldValueIs name="accessType" value="off_premise"}}
+        {{>afQuickField name="accessInstructions"}}
+    {{/if}}
+    <button type="submit" class="btn btn-primary"> next </button>
+  {{/autoForm}}
+</template>

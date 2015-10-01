@@ -1,0 +1,16 @@
+<template name="PropertyCreate2">
+	<div class="map__container">
+		<div class="address__container">
+			<h1>Is this your property?</h1>
+			<div class="property__button-container">
+		    <a href="{{pathFor route='propStep1'}}" class="btn__circle--lrg btn--cancel">
+			    <span class="btn--icon-x"></span>
+		    </a>
+		    <a href="{{pathFor route='propStep3'}}" class="btn__circle--lrg btn--accept">
+			    <span class="btn--icon-checkmark"></span>
+		    </a>
+		  </div>
+		</div>
+		{{> googleMap name="MapTwo" options=mapOptions}}
+	</div>
+</template>

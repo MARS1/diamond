@@ -1,0 +1,19 @@
+<template name="JobStory">
+  {{#autoForm type="normal" schema=jobStorySchema id="jobStoryForm" doc=jobStoryData}}
+    <h3> Insert images of your property (only areas you want cleaned) </h3>
+    <button disabled class="btn btn-default"> + Add a photo </button>
+    <!-- add img -->
+
+    <h3> Tell us what's special to you about your property (optional) </h3>
+    <div> Does your property have an interesting history or is there something you'd like to share? </div>
+    {{>afQuickField name="specialDetails" rows=3}}
+    <!-- <textarea id="special_details">{{new_job.special_details}}</textarea> -->
+
+    <h3> What areas of the house should be given the most attention? </h3>
+    <div> Include details about areas that need the most attention or what to be careful around. </div>
+    {{>afQuickField name="attentionDetails"}}
+    <!-- <textarea id="attention_details">{{new_job.attention_details}}</textarea> -->
+
+    <button type="submit" class="btn btn-primary" fxn="submitJobStory"> next </button>
+  {{/autoForm}}
+</template>
