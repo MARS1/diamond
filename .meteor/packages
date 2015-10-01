@@ -1,0 +1,60 @@
+# Meteor packages used by this project, one per line.
+# Check this file (and the other files in this directory) into your repository.
+#
+# 'meteor add' and 'meteor remove' will edit this file for you,
+# but you can also edit it by hand.
+
+meteor-platform
+accounts-password
+fortawesome:fontawesome
+accounts-facebook
+accounts-twitter
+accounts-ui-unstyled
+reactjs:react
+mrt:modernizr-meteor
+meteorhacks:flow-router
+meteorhacks:flow-layout
+aldeed:collection2
+aldeed:autoform
+aldeed:simple-schema
+zimme:active-route
+reactive-dict
+service-configuration
+arillo:flow-router-helpers
+natestrauser:animate-css
+flemay:less-autoprefixer
+meteorhacks:fast-render
+dburles:google-maps
+reactive-var
+infinitedg:gsap
+mrt:external-file-loader
+nemo64:bootstrap
+
+# percolatestudio:percolatestudio-migrations
+# alanning:roles
+# dburles:collection-helpers
+# reywood:publish-composite
+# mrt:moment
+# mrt:underscore-string-latest
+# matb33:collection-hooks
+# dburles:factory
+# anti:fake
+# cunneen:mailgun
+# yasinuslu:blaze-meta
+# peppelg:on-login-logout
+# percolate:synced-cron
+# sanjo:jasmine
+# velocity:html-reporter
+# useraccounts:core
+# 3stack:match-library
+# xolvio:template-isolator
+# xolvio:inbox-stub
+# service-configuration
+# accounts-base
+# accounts-google
+# cfs:gridfs
+# cfs:standard-packages
+# velocity:console-reporter
+# velocity:core
+# useraccounts:unstyled
+
